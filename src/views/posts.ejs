@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Notícias</title>
+</head>
+<body>
+    <div class="news-card">
+    <% if(articles != null){ %>
+        <% articles.forEach(function(article, index){ console.log(article) %>
+            <div class="card">
+                <h2><%-article.titulo%></h2>
+                <img src="<%- article.imagem %>" alt="Manifestação Pró Bolsonaro" srcset="">
+                <p><%- article.conteudo %></p>   
+                <br>
+            </div>
+        <% }) %>        
+    <% } %>
+    </div>
+    
+</body>
+</html>
