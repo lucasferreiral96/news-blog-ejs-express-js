@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use('/css', express.static(__dirname + '/src/public/css'));
+app.use('/model', express.static(__dirname+('/src/model')))
 
 app.set('views', __dirname+'/src/views');
 app.set('view engine', 'ejs');
@@ -53,8 +54,6 @@ app.get("/api", async (req, res) => {
     dados.map((resultados) => resultados.toJSON()).forEach(element => {
         console.log(element);
     });
-
-    console.log(dados);
     res.send(dados);
 })
 
@@ -73,6 +72,10 @@ app.post("/postar",  (req, res) => {
         }
     })
 
+})
+
+app.get("/newpost", (req, res) => {
+    res.render("newpost");
 })
 
 

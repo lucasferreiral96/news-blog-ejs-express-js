@@ -13,20 +13,40 @@
             <div class="menu">
                 <div class="links">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Posts</a></li>
-                        <li><a href="#">Novo Post</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/noticias">Posts</a></li>
+                        <li><a href="/newpost">Novo Post</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
 
-    <body>
-        <div class="container">
-            <h1>Ainda não há nada aqui</h1>
+    <div class="container">
+        <h1>Ainda não há nada aqui</h1>
+    </div>
+
+    <div class="fade">fade</div>
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Inserir Post</h3>
+            <button id="close-modal">Fechar</button>
         </div>
-    </body>
+        <div class="modal-body">
+            <div class="titulo">
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" placeholder="Insira um titulo">
+            </div>
+            <div class="imagem">
+                <h5>AQUI É ONDE VAI A IMAGEM</h5>
+            </div>
+            <div class="conteudo">
+                <label for="conteudo">Conteúdo</label>
+                <input type="text" id="conteudo" placeholder="Insira o conteúdo">
+            </div>
+        </div>
+    </div>
   
+  <script src="/model/script.js"></script>
 </body>
 </html>

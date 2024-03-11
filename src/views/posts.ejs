@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Notícias</title>
+    <title>Info News - Posts</title>
 </head>
 <body>
-    <div class="news-card">
-    <% if(articles != null){ %>
-        <% articles.forEach(function(article, index){ console.log(article) %>
-            <div class="card">
-                <h2><%-article.titulo%></h2>
-                <img src="<%- article.imagem %>" alt="" srcset="">
-                <p><%- article.conteudo %></p>   
-                <br>
+    <header>
+        <div class="header">
+            <div class="logo">Info News</div>
+            <div class="menu">
+                <div class="links">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/noticias">Posts</a></li>
+                        <li><a href="/newpost">Novo Post</a></li>
+                    </ul>
+                </div>
             </div>
-        <% }) %>        
-    <% } %>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="news-card">
+            <% if(articles != null){ %>
+                <% articles.forEach(function(article, index){%>
+                    <div class="card">
+                        <h4><a href="#"><%-article.titulo%></a></h4>
+                        <img src="<%- article.imagem %>" alt="" srcset="">
+                        <p><%- article.conteudo %></p>
+                        <div class="vermais">
+                            <a href="#">Ver Mais</a>
+                        </div>
+                        <br>
+                    </div>
+                <% }) %>        
+            <% } %>
+            </div>
     </div>
+
     
+  
+  <script src="/model/script.js"></script>
 </body>
 </html>

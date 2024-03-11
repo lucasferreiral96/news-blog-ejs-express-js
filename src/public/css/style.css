@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #efefef;
 }
 
 header{
@@ -59,13 +64,18 @@ header{
     width: 100%;
 }
 .card{
-    width: 450px;
+    width: 350px;
+    min-height: 626px;
+    max-height: 626px;
+    height: fit-content;
     border: 1px solid black;
     margin: 10px;
+    position: relative;
 }
 
-.card h2{
+.card h4{
     text-align: center;
+    padding: 10px 0 0 0;
 }
 
 .card img{
@@ -75,4 +85,71 @@ header{
 
 .card p{
     padding: 0 10px;
+    margin: 0 0 50px 0;
+}
+
+.container-new-post{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin: 50px 0 50px 0;
+}
+
+.new-post{
+    min-width: 850px;
+    max-width: 850px;
+}
+
+.new-post h1{
+    padding: 20px 10px;
+}
+
+.titulo{
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 0 0 0 5px;
+}
+
+.file{
+    margin: 5px 0 0 0;
+}
+
+.textarea{
+    min-width: 100%;
+    resize: none;
+    margin: 20px 0 30px 0;
+    padding: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.postar{
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.vermais{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.vermais a{
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 8px;
+    background-color: #003049;
+    color: #fff;
+    border-radius: 3px;
+    transition-duration: .3s;
+}
+
+.vermais a:hover{
+    background-color: #12425c;
 }
